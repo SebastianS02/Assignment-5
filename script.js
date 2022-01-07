@@ -37,8 +37,8 @@ function removeRow(){
     }
 }
 
-function removeColumns() {
-    if (cells == 1) {
+function removeColumns(){
+    if (cells == 1){
       return;
     }
     cells--;
@@ -47,4 +47,6 @@ function removeColumns() {
     for (let i = 0; i < tr.length; i++) {
       tr[i].removeChild(tr[i].lastChild);
     }
-  }
+}
+
+const selectColor = (color) => selectedColor = color;
