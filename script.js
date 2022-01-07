@@ -36,3 +36,15 @@ function removeRow(){
       cells = 1;
     }
 }
+
+function removeColumns() {
+    if (cells == 1) {
+      return;
+    }
+    cells--;
+    let rows3 = document.getElementsByClassName("row");
+    tr = [...rows3];
+    for (let i = 0; i < tr.length; i++) {
+      tr[i].removeChild(tr[i].lastChild);
+    }
+  }
