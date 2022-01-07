@@ -70,4 +70,13 @@ function helperFunction(cell) {
 function changeColor() {
     this.style.backgroundColor = selectedColor;
     this.classList.remove("uncolored");
-  }
+}
+
+function bucketTool(){
+    let cells = document.getElementsByTagName("td");
+    let cells2 = [...cells];
+    cells2.forEach((cell) => {
+      cell.style.backgroundColor = selectedColor;
+      cell.classList.remove("uncolored");
+    });
+}
