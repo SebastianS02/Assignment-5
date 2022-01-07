@@ -2,8 +2,7 @@ let cells = 1;
 let selectedColor = "red";
 let coloring = false;
 
-// Function to add rows to table
-function addNewRows() {
+function addRows() {
   let table = document.getElementById("table");
   let row = document.createElement("tr");
   row.classList.add("row");
@@ -14,3 +13,14 @@ function addNewRows() {
     row.appendChild(cell);
   }
 }
+
+function addColumns(){
+    cells++;
+    let newRows = document.getElementsByClassName("row");
+    tr = [...newRows];
+    for (let i = 0; i < tr.length; i++) {
+      let cell = document.createElement("td");
+      helperFunction(cell);
+      tr[i].appendChild(cell);
+    }
+  }
