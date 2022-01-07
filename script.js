@@ -50,3 +50,24 @@ function removeColumns(){
 }
 
 const selectColor = (color) => selectedColor = color;
+
+function helperFunction(cell) {
+    cell.classList.add("uncolored");
+    cell.addEventListener("click", changeColor);
+    cell.addEventListener("mousedown", (e) => coloring = true);
+    cell.addEventListener("mousemove", (e) => {
+    if (coloring){
+        cell.style.backgroundColor = selectedColor;
+    }
+    });
+    cell.addEventListener("mouseup", (e) => {
+      if (coloring) {
+        coloring = false;
+      }
+    });
+  }
+  
+function changeColor() {
+    this.style.backgroundColor = selectedColor;
+    this.classList.remove("uncolored");
+  }
