@@ -1,6 +1,6 @@
 let cells = 3;
 let selectedColor = "red";
-let coloring = false;
+let coloring = false; 
 
 function addRows(){
   let table = document.getElementById("table");
