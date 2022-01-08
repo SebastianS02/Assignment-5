@@ -80,3 +80,15 @@ function bucketTool(){
       cell.classList.remove("uncolored");
     });
 }
+
+function fillUncolored() {
+    let cells = document.getElementsByTagName("td");
+    let cls = [...cells];
+    let uncoloredCells = cls.filter((cell) => {
+      return cell.classList.contains("uncolored");
+    });
+    uncoloredCells.forEach((cell) => {
+      cell.style.backgroundColor = selectedColor;
+      cell.classList.remove("uncolored");
+    });
+}
