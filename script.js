@@ -92,3 +92,12 @@ function fillUncolored() {
       cell.classList.remove("uncolored");
     });
 }
+
+function clearAll() {
+    let cells5 = document.getElementsByTagName("td");
+    let cls = [...cells5];
+    cls.forEach((cell) => {
+      cell.style.backgroundColor = "whitesmoke";
+      cell.classList.add("uncolored");
+    });
+}
